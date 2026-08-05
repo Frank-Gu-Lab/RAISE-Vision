@@ -9,3 +9,8 @@ Existing sessile drop contact angle measurements for contact lenses have poor re
 This repository contains the hardware designs, control software, and image analysis scripts used to build and run the RAISE-Vision platform, along with the benchmarking data and statistical analysis reported in the associated manuscript.
 
 RAISE-Vision builds on the RAISE platform (Nazeri et al., *Digital Discovery*, 2026) for automated formulation-linked wettability measurement, which has been tailored for curved contact lens substrates.
+
+
+## Contact
+
+For questions about this repository, please open an issue or contact Frank Gu (f.gu@utoronto.ca).
