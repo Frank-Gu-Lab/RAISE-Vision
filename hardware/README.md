@@ -1,6 +1,6 @@
 # Hardware
 
-This folder contains the mechanical design files (STL) for the RAISE-Vision imaging system. Parts are organized into three subfolders, each corresponding to a major subassembly.
+This folder contains the mechanical design files (STL) for the RAISE-Vision automated platform. Parts are organized into three subfolders.
 
 ## Folder structure
 
