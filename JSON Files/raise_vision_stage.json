@@ -1,0 +1,71 @@
+{
+    "ordering": [
+        [
+            "A1"
+        ],
+        [
+            "A2"
+        ]
+    ],
+    "brand": {
+        "brand": "home",
+        "brandId": []
+    },
+    "metadata": {
+        "displayName": "Home 2 Well Plate 10 µL",
+        "displayCategory": "wellPlate",
+        "displayVolumeUnits": "µL",
+        "tags": []
+    },
+    "dimensions": {
+        "xDimension": 127,
+        "yDimension": 86,
+        "zDimension": 15
+    },
+    "wells": {
+        "A1": {
+            "depth": 15,
+            "totalLiquidVolume": 10,
+            "shape": "circular",
+            "diameter": 20,
+            "x": 32,
+            "y": 43.09,
+            "z": 0
+        },
+        "A2": {
+            "depth": 15,
+            "totalLiquidVolume": 10,
+            "shape": "circular",
+            "diameter": 20,
+            "x": 96,
+            "y": 43.09,
+            "z": 0
+        }
+    },
+    "groups": [
+        {
+            "metadata": {
+                "wellBottomShape": "v"
+            },
+            "wells": [
+                "A1",
+                "A2"
+            ]
+        }
+    ],
+    "parameters": {
+        "format": "irregular",
+        "quirks": [],
+        "isTiprack": false,
+        "isMagneticModuleCompatible": false,
+        "loadName": "home_2_wellplate_10ul"
+    },
+    "namespace": "custom_beta",
+    "version": 1,
+    "schemaVersion": 2,
+    "cornerOffsetFromSlot": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}

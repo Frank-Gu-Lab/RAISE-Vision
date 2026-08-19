@@ -1,0 +1,184 @@
+{
+    "ordering": [
+        [
+            "A1",
+            "B1",
+            "C1"
+        ],
+        [
+            "A2",
+            "B2",
+            "C2"
+        ],
+        [
+            "A3",
+            "B3",
+            "C3"
+        ],
+        [
+            "A4",
+            "B4",
+            "C4"
+        ]
+    ],
+    "brand": {
+        "brand": "FGL",
+        "brandId": []
+    },
+    "metadata": {
+        "displayName": "FGL_Trash",
+        "displayCategory": "tipRack",
+        "displayVolumeUnits": "µL",
+        "tags": []
+    },
+    "dimensions": {
+        "xDimension": 127.76,
+        "yDimension": 85.48,
+        "zDimension": 50
+    },
+    "wells": {
+        "A1": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 20,
+            "y": 73.48,
+            "z": 45
+        },
+        "B1": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 20,
+            "y": 43.48,
+            "z": 45
+        },
+        "C1": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 20,
+            "y": 13.48,
+            "z": 45
+        },
+        "A2": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 50,
+            "y": 73.48,
+            "z": 45
+        },
+        "B2": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 50,
+            "y": 43.48,
+            "z": 45
+        },
+        "C2": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 50,
+            "y": 13.48,
+            "z": 45
+        },
+        "A3": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 80,
+            "y": 73.48,
+            "z": 45
+        },
+        "B3": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 80,
+            "y": 43.48,
+            "z": 45
+        },
+        "C3": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 80,
+            "y": 13.48,
+            "z": 45
+        },
+        "A4": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 110,
+            "y": 73.48,
+            "z": 45
+        },
+        "B4": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 110,
+            "y": 43.48,
+            "z": 45
+        },
+        "C4": {
+            "depth": 5,
+            "totalLiquidVolume": 15,
+            "shape": "circular",
+            "diameter": 10,
+            "x": 110,
+            "y": 13.48,
+            "z": 45
+        }
+    },
+    "groups": [
+        {
+            "metadata": {},
+            "wells": [
+                "A1",
+                "B1",
+                "C1",
+                "A2",
+                "B2",
+                "C2",
+                "A3",
+                "B3",
+                "C3",
+                "A4",
+                "B4",
+                "C4"
+            ]
+        }
+    ],
+    "parameters": {
+        "format": "irregular",
+        "quirks": [],
+        "isTiprack": true,
+        "tipLength": 5,
+        "isMagneticModuleCompatible": false,
+        "loadName": "fgl_trash"
+    },
+    "namespace": "custom_beta",
+    "version": 1,
+    "schemaVersion": 2,
+    "cornerOffsetFromSlot": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}
