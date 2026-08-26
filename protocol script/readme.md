@@ -45,5 +45,5 @@ This notebook runs a full RAISE-Vision measurement cycle:
 
 - Each drying/droplet cycle uses fresh disposable tips (drying inserts and 
   drypad tips are single-use, discarded after each application).
-- The sessile drop cycle runs 10 times per lens by default — adjust the 
+- The sessile drop cycle runs 10 times per lens by default, adjust the 
   `range(10)` loop in the main workflow cell to change this.
