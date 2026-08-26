@@ -1,0 +1,12 @@
+Filename,Cycle,Left CA,Right CA,Left Cut,Right Cut, NRMSE
+/Image_0.jpg,0,59.82,65.36,0,0,1000
+/Image_1.jpg,1,85.95,82.15,0,0,1000
+/Image_2.jpg,2,80.95,81.07,0,0,1000
+/Image_3.jpg,3,74.79,79.46,0,1,1000
+/Image_4.jpg,4,79.43,74.62,0,0,1000
+/Image_5.jpg,5,76.41,69.89,0,1,1000
+/Image_6.jpg,6,94.82,88.36,0,0,1000
+/Image_7.jpg,7,85.86,81.57,0,0,1000
+/Image_8.jpg,8,73.01,74.73,1,0,1000
+/Image_9.jpg,9,88.78,83.55,1,1,1000
+ End of Run, crop = [200:1100::200:1400], min_len = 80, leftOffset=30 | rightOffset=31

@@ -1,0 +1,12 @@
+Filename,Cycle,Left CA,Right CA,Left Cut,Right Cut,
+/Image_1.jpg,0,64.9,63.8,15,7,1000
+/Image_2.jpg,1,82.37,83.53,2,2,1000
+/Image_3.jpg,2,76.88,75.59,3,1,1000
+/Image_4.jpg,3,70.89,60.69,6,3,1000
+/Image_5.jpg,4,82.89,78.38,0,1,1000
+/Image_6.jpg,5,74.3,76.39,3,1,1000
+/Image_7.jpg,6,88.06,79.81,0,0,1000
+/Image_8.jpg,7,82.35,80.08,0,0,1000
+/Image_9.jpg,8,82.43,80.04,4,1,1000
+/Image_10.jpg,9,77.76,77.17,5,0,1000
+ End of Run, crop = [400:1100::60:900], min_len = 100, leftOffset=30 | rightOffset=31,,,

@@ -1,0 +1,12 @@
+Filename,Cycle,Left CA,Right CA,Left Cut,Right Cut, NRMSE
+/Image_0.jpg,0,67.25,67.68,N/A,N/A,0.001
+/Image_1.jpg,1,88.39,88.14,N/A,N/A,0.001
+/Image_2.jpg,2,90.59,90.59,N/A,N/A,0.001
+/Image_3.jpg,3,81.84,81.92,N/A,N/A,0.001
+/Image_4.jpg,4,82.16,82.05,N/A,N/A,0.001
+/Image_5.jpg,5,79.5,78.78,N/A,N/A,0.001
+/Image_6.jpg,6,98.73,98.74,N/A,N/A,0.001
+/Image_7.jpg,7,89.46,89.3,N/A,N/A,0.001
+/Image_8.jpg,8,83.41,83.19,N/A,N/A,0.001
+/Image_9.jpg,9,94.12,93.81,N/A,N/A,0.001
+ End of Run, ellipse method
