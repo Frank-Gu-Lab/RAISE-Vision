@@ -1,0 +1,102 @@
+# Automated Image Processing of Contact Angles on a Curved Surface
+
+<details>
+  <summary>Authors: Erin Ng, Julie Liu</summary>
+  
+| Coding | Writing |
+| -------- | -------- |
+| Erin Ng   | Julie Liu |
+| Julie Liu   | Erin Ng |
+
+<center>Coding: image processing program and script<br>
+Writing: README file and code comments</center>
+</details>
+
+*Note: This README file is also provided in `.ipynb` format for easier reading in code editors that support ipynb formats, and in `.html` format in case other formats are non-functional with your code editor.*
+
+## Introduction
+
+The purpose of creating this program is to develop an open-source script for processing images of contact angles (CA) on a curved surface. It was specifically designed for processing a sessile drop on a curved contact lens surface. In accordance with the paper *RAISE-Vision: An Automated Contact Angle Measurement Platform for Contact Lens Wettability Characterization*, it primarily employs an elliptical fit method that closely matches the results of commercial curved surface processing software, and only employes a  self-developed tangent method when the normalized root mean square error (NRMSE) of the elliptical method is greater than 0.005. As such, the comparability and relevance of the image processing results with other analysis softwares are preserved.
+
+## Code Architecture
+
+This program was designed with the intend of being an efficient and user-friendly tool for image processing. It's entire set of code is compiled into one file to streamline editing and code transfer. In the first cell*, all the required import statements are called. In the second cell, the folder with the CA images is selected, while a "Processed_Data" folder containing all the CA values and processed images is created within the selected folder. In the third cell, all the smaller utility functions are defined. In the fourth cell, a `combined()` function is defined that, as the name suggests, combines all the utility functions together based on different conditions into a usable code. The fifth cell calls a function that allows the user to adjust the crop dimensions for the CA images, to be used in the next cell. The sixth cell defines the `main()` function, where the desired crop dimensions are inputed along with other specific conditions as listed:
+- which images to process: all or only a selected few
+- type of experiment
+- crop dimensions
+- minimum length/height of the droplet being looked for
+- if automated left and right CA cutting** should be activated
+    - if on, what the offset from s-l interface (droplet to curved surface) should be
+    - if not, what the manual left and right cut values should be
+- if the left CA and/or right CA should be calculated
+
+The last cell runs the `main()` function, which runs the entire code using the specified conditions.
+
+_<span style="color: gray">*cell: Cells are shown when using the `.ipynb` file. In the `.py` file, cells can be differentiated by the comments <code style="color: green;background-color: mintcream"># In[#]:</code>, where <code style="color: green;background-color: mintcream">#</code> is any integer, that indicate the start of a new cell.</span>_
+
+_<span style="color: gray">**cutting: Cutting here refers to the number of points from the droplet contour that should be removed. Automated cutting means that the code will remove the required amount automatically. Otherwise, manual cutting is activated, which means that the user can select how much to remove from the contour based on visual inspection. This is usually only required if the automated cutting fails to recognize the actual intersection between the droplet and the curved surface. </span>_
+
+## Preliminary Setup
+
+This program was built in Jupyter Notebook, accessed through Anaconda. As such, the preliminary setup will be described for this application (as of August 2026). 
+
+*<span style="color:gray">Note: The program should work in other Python script editors with libraries accessed through a conda environment. If all packages from the provided conda environment are manually installed, it is also possible to run the code with only a Python script editor.</span>*
+
+#### First-Time Anaconda Users:
+
+1. Download Anaconda [here](https://www.anaconda.com/download/success). Choose the correct operating system, then download the graphical installer in "Anaconda Distrubition". In the Advanced Installation Options, unselect "Add Anaconda3 to my PATH environment variable". *Note: Downloading Miniconda will require downloading Jupyter Notebook separately, but may save disk space overall.*
+2. Download the RAISE-Vision environment file from the GitHub repository. For Windows, download the `.yaml` version. For macOS, download the `.yml` version. For Linux or other operating systems, try either version.
+3. Open Anaconda Navigator (from the Anaconda download). Click on Environments in the left side panel.
+4. Click on Import in the bottom-left (to the right side of the side panel). Upload the RAISE-Vision environment from Step 2, with the environment name as "RAISE-Vision". If the upload gives a `ResolvePackageNotFound` error, download the other environment extension from Step 2 and try again.
+5. Download the `CurvedSurface_CA_ImageProcessing.ipynb` Python script. Save it to a desired location. Within that location, a folder containing the data to be analyzed will need to be added later (see Image Processing Setup).
+7. In Anaconda Navigator, click on Home in the left side panel.
+8. At the top, select "All Applications" on "RAISE-Vision".
+9. Below that, find Jupyter Notebook and click Launch. *It should be located between JupyterLab and PyCharm Community (as of August 2026).* A Windows Command Prompt (for Windows), Terminal (for macOS) or equivalent should be lauched.
+10. The Jupyter Notebook Dashboard containing a file tree directory of the installation drive should open in a new tab of the computer's default browser. *Note: Within the dashboard, new files can be made in different conda environments and files can be uploaded as if accessing the folders in File Explorer/Finder/equivalent file manager.*
+11. Navigate through the file tree to the Python script. Click on it to open the file (opens in a new tab).
+12. In the top-right corner of the file, click on the "Python [conda env:base]" (or equivalent). Change it to "Python [conda env:RAISE-Vision]" or, if the environment was named differently, "Python [conda env:(name given to the RAISE-Vision environment)]". This will run the code in the RAISE-Vision environment so that the import statements can run without manually downloading all of the required pacakges.
+13. Run the first cell containing the import statements. Check to ensure no errors occur.
+14. If errors arise, try the following:<br>
+    - Redo Steps 2-4 and Step 10.<br>
+    - For Windows, open Anaconda Prompt and enter "conda activate RAISE-Vision". If the environment was named differently, enter "conda activate (name of RAISE-Vision environment)".
+    - For macOS/Linus/other OS, open Terminal/equivalent and enter "conda activate RAISE-Vision". If the environment was named differently, enter "conda activate (name of RAISE-Vision environment)".
+    - Try launching JupyterLab instead of Jupyter Notebook in Step 8. For Step 10, the environment can be changed in the bottom left, look for the same words.
+    - Update Jupyter Notebook or JupyterLab by going to Anaconda Navigator and clicking on the gear icon in the top-right of the box for each application. Select either "Update Application" or choose a specific version to install.
+
+#### Seasoned Anaconda Users:
+
+1. Download the RAISE-Vision environment file from the GitHub repository. For Windows, download the `.yaml` version. For macOS, download the `.yml` version. For Linux or other operating systems, try either version or whichever version is known to work.
+2. Import the environment as "RAISE-Vision" in Anaconda Navigator. *(See steps 2-4 in "First-Time Anaconda Users" if unsure how.)*
+3. Download the `CurvedSurface_CA_ImageProcessing.ipynb` Python script. Save it to a desired location. Within that location, a folder containing the data to be analyzed will need to be added later (see Image Processing Setup).
+4. Open Jupyter Notebook (or JupyterLab) and open the python script.
+5. Set the python script environment to RAISE-Vision. *(See steps 10 or 12 in "First-Time Anaconda Users" if unsure how.)*
+6. Run the first cell of import statements in the script to ensure no errors occur.
+7. If errors arise, go to step 12 in "First-Time Anaconda Users". If errors persist, go through all the steps in "First-Time Anaconda Users".
+
+## Image Processing Setup
+
+1. Ensure that the Preliminary Setup was successfully performed.
+2. Open the `CurvedSurface_CA_ImageProcessing.ipynb` file from Jupyter Notebook.
+3. Check the top-right corner to ensure the file is in the RAISE-Vision environment. If not, change it to RAISE-Vision.
+4. Run the first cell of import statements.
+5. In the second cell, input the location of the data file in the `run` variable according to the file hierarchy as shown in Figure 1 below, which should be written as: `run = str('YYYYMMDD/YYYYMMDD-Data File (1)')`, where the (1) indicates Trial 1. *Note: The file path format used in the script to access/read/write to/create files has been shown to work on both a Windows and a macOS computer, but has not been tested on other operating systems.* <center><img src="Figure1 File Hierarchy with Trials.png" width="500"></center> <div style="text-align: center; max-width: 700px; margin: 0 auto; pointer-events: none; user-select: none;">Figure 1. Depiction of File Hierarchy; all folders and files should exist, except the `Processed_Data` folder, which will be created by the code; the (1), (2), and (3), represent the trial number.</div><br>
+6. Run the second cell. Check that a `Processed_Data` folder got created in the correct location. If the cell errors, check that the folder does not already exist and check that the file paths are correct.
+7. Run the `#Set of Functions` cell. It includes all the functions required for the code.
+8. Run the `#Combines All Functions Together into Funcitonal Code` cell. It combines all the functions from Step 7 into a functional image processing script that combines the Ellipse and Tangent CA methods.
+9. Run the `#Test Image Crop Size without Running Entire Code` cell. It is used to determine the required crop dimension for the images taken in the trial. Note that it automatically uses the first droplet in the `selection` list.
+10. In the next cell, edit the `main()` function based on desired testing conditions. Set `experiment` as `"T&RH"`. Use the determined crop dimensions from Step 9 as the `img_crop_values`. Note that for `selection`, `["all"]` defines all the images read from the file, while `[0,1,2,3...]` allows for specific image selection. For instance, setting `selection = [0,4,8]` will process only the 1st, 5th, and 9th droplets (labelled as image_0,4,8).
+11. Run the cell edited in Step 10 (`#Edit Info Here`).
+12. Run the next cell (`main()`).
+13. Review the processed images for accuracy.
+14. If any images are inaccurate, set those images in `selection` from the cell in Step 10 to manually change parameters (see Table 1 below) to achieve accurate CA.
+
+<center><h4>Table 1. Manually Adjustable Parameters</h4></center>
+
+| Parameter | Variable(s) | Description | Common Usage Situations |
+| --- | --- | --- | --- |
+| Image Crop | img_crop_values | changes the crop of the images | if `lens_curve` is inaccurate, if droplet was out of frame |
+| Mininum Droplet Height | min_len | minimum height of the droplet being looked for | if CA is so low that the droplet can't be detected |
+| Droplet Curve Slope | see comments within dropletContour() | changes slope multiplier | if CA is so low that the droplet can't be detected, or only part of the droplet was detected |
+| Method | alwaysEllipse, alwaysTangent | to toggle between methods or use both | if only one method is wanted |
+| Droplet Cut | autoLeft, autoRight, left_cut, right_cut | to toggle between automatic or manual adjustment of droplet curve | if the droplet curve extends past the droplet |
+| Left or Right CA | left, right | to toggle between calculating either or both CA | if only one side CA needs to be changed |

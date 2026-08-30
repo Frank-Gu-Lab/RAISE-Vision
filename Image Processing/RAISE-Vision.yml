@@ -1,0 +1,15 @@
+name: RAISE-Vision
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - matplotlib
+  - numpy
+  - python=3.10
+  - scikit-image
+  - scipy
+  - pandas
+  - seaborn
+  - opencv
+  - statsmodels
+prefix: C:\Users\erin-\anaconda3\envs\RAISE-Vision
