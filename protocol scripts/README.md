@@ -8,7 +8,7 @@ using a custom stage, drypad apparatus, and camera for image capture.
 This folder contains the full RAISE-Vision measurement pipeline, split across two parts:
 
 1. **`RAISE_Vision.ipynb`** — runs on the OT-2, controls the physical measurement cycle.
-2. **`RAISE-Vision Combined Code/`** — runs on the host PC, handles the camera, the
+2. **`RAISE-Vision Integration Code/`** — runs on the host PC, handles the camera, the
    client/server link to the OT-2, and image analysis.
 
 ### 1. OT-2 protocol (`RAISE_Vision.ipynb`)
@@ -20,7 +20,7 @@ This folder contains the full RAISE-Vision measurement pipeline, split across tw
    captures an image, then removes the droplet with a drypad tip.
 5. Sends the captured images to the camera server for analysis.
 
-### 2. Camera & analysis code (`RAISE-Vision Combined Code/`)
+### 2. Camera & analysis code (`RAISE-Vision Integration Code/`)
 
 - **`Server.py`** — base TCP socket server class. Opens a connection on the host
   PC and accepts commands sent from the OT-2 notebook.
@@ -57,7 +57,7 @@ This folder contains the full RAISE-Vision measurement pipeline, split across tw
 
 ## Environment setup
 
-Two conda environment files are provided for the camera/analysis PC (`RAISE-Vision Combined Code/`),
+Two conda environment files are provided for the camera/analysis PC (`RAISE-Vision Integration Code/`),
 depending on OS:
 
 ```bash
