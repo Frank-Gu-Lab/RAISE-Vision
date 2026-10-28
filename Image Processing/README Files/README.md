@@ -65,7 +65,7 @@ This program was built in Jupyter Notebook, accessed through Anaconda. As such, 
 
 #### Seasoned Anaconda Users:
 
-1. Download the RAISE-Vision environment file from the GitHub repository. For Windows, download the `.yaml` version. For macOS, download the `.yml` version. For Linux or other operating systems, try either version or whichever version is known to work.
+1. Download the RAISE-Vision environment file from the GitHub repository. For Windows, download the `.yaml` version. For macOS, download the `.yml` version. For Linux or other operating systems, try either version or whichever version is known to work. If no versions work, try the identically named files from "protocol scripts" in this GitHub.
 2. Import the environment as "RAISE-Vision" in Anaconda Navigator. *(See steps 2-4 in "First-Time Anaconda Users" if unsure how.)*
 3. Download the `CurvedSurface_CA_ImageProcessing.ipynb` Python script. Save it to a desired location. Within that location, a folder containing the data to be analyzed will need to be added later (see Image Processing Setup).
 4. Open Jupyter Notebook (or JupyterLab) and open the python script.
