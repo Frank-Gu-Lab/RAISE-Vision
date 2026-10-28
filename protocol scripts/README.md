@@ -58,14 +58,14 @@ This folder contains the full RAISE-Vision measurement pipeline, split across tw
 ## Environment setup
 
 Two conda environment files are provided for the camera/analysis PC (`RAISE-Vision Integration Code/`),
-depending on OS:
+depending on OS.: _(If one version does not work, try the other even if it doesn't match the OS.)_
 
 ```bash
 # macOS
-conda env create -f RAISE-Vision-OT2-mac.yml
+conda env create -f RAISE-Vision.yml
 
 # Windows
-conda env create -f RAISE-Vision-OT2-Windows.yaml
+conda env create -f RAISE-Vision.yaml
 
 conda activate RAISE-Vision
 ```
